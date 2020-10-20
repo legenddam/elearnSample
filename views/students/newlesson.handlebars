@@ -1,0 +1,24 @@
+<h2>Add Lesson</h2>
+{{#if errors}}
+    {{#each errors}}
+        <div class="notice error"><i class="icon-remove-sign icon-large"></i>
+            {{msg}}
+            <a href="#close" class="icon-remove"></a>
+        </div>
+    {{/each}}
+{{/if}}
+<form id="regForm" method="post" action="/students/classes/{{class_id}}/lessons/new">
+    <div>
+        <label>Lesson Number :</label>
+        <input type="text" name="lesson_number">
+    </div>
+    <div>
+        <label>Lesson Tittle :</label>
+        <input type="text" name="lesson_title">
+    </div>
+    <div>
+        <label>Lesson Body :</label>
+        <textarea name="lesson_body"></textarea>
+    </div>
+    <input type="submit" value="Add Lesson">
+</form>
